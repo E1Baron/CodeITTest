@@ -6,7 +6,5 @@ public class Main {
             poorMensCounter = poorMensCounter + 2;
             System.out.println("Уволен айтишник с ID "+poorMensCounter);
         }
-
-
     }
 }
