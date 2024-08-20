@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -39,6 +38,18 @@ public class Main {
         System.arraycopy(testArrayRevers, 0, testArray, 0, testArray.length);
         System.out.println("Элементы изначального массива подвергли реверсу" +
                 " и записали в изначальный массив \n" + Arrays.toString(testArray));
+        //todo
+        //Ниже решение задачи особой сложности - так как НУЖНО было её решить, без фокусов
+
+        int[] mass2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int changer = 0;
+        for (int i = 0; i < mass2.length - 1; i++) {
+            changer = mass2[i];
+            mass2[i] = mass2[mass2.length - (1 + i)];
+            mass2[mass2.length - (1 + i)] = changer;
+        }
+        System.out.println(Arrays.toString(mass2));
+
     }
 
 }
