@@ -42,13 +42,22 @@ public class Main {
         //Ниже решение задачи особой сложности - так как НУЖНО было её решить, без фокусов
 
         int[] mass2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        System.out.println("Массив 2 в изначальном виде");
+        for ( int i : mass2){
+            System.out.print(i + " ");
+        }
         int changer = 0;
         for (int i = 0; i < mass2.length - 1; i++) {
             changer = mass2[i];
             mass2[i] = mass2[mass2.length - (1 + i)];
             mass2[mass2.length - (1 + i)] = changer;
         }
-        System.out.println(Arrays.toString(mass2));
+        System.out.println();
+        System.out.println("Наконец развёрнутый Массив 2");
+        for(int i : mass2){
+            System.out.print(i + " ");
+        }
+
 
     }
 
