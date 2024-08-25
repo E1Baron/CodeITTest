@@ -47,7 +47,7 @@ public class Main {
             System.out.print(i + " ");
         }
         int changer = 0;
-        for (int i = 0; i < mass2.length - 1; i++) {
+        for (int i = 0; i < mass2.length / 2; i++) {
             changer = mass2[i];
             mass2[i] = mass2[mass2.length - (1 + i)];
             mass2[mass2.length - (1 + i)] = changer;
