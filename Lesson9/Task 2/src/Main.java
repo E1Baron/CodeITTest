@@ -19,11 +19,6 @@ public class Main {
          scanInput = new Scanner(System.in).nextInt();
     }
     public static void evenOrNot(){
-        if (scanInput % 2 == 0){
-            System.out.println(true);
-        }
-        else if (scanInput % 2 != 0){
-            System.out.println(false);
-        }
+        System.out.println(scanInput % 2 == 0);
     }
 }
