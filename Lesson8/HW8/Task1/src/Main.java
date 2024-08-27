@@ -46,7 +46,7 @@ public class Main {
 
         int[] mass2 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("Массив 2 в изначальном виде");
-        for ( int i : mass2){
+        for (int i : mass2) {
             System.out.print(i + " ");
         }
         System.out.println();
@@ -58,7 +58,7 @@ public class Main {
         }
         System.out.println();
         System.out.println("Наконец развёрнутый Массив 2");
-        for(int i : mass2){
+        for (int i : mass2) {
             System.out.print(i + " ");
         }
 
