@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Main {
     static double a = 0;
     static double b = 0;
-    static boolean endProgramFlag = false;
+    static boolean isEndProgramFlag = false;
 
     public static void main(String[] args) {
 
         //todo Вам нужно дополнить методы так, чтобы получился рабочий калькулятор
-        while (endProgramFlag == false) {
+        while (isEndProgramFlag == false) {
             System.out.print("""
                     Добро пожаловать в КалькуляторМатик 3000 ! Наша программа может подсчитать что угодно!
                     Введите первое число, затем второе число, затем знак необходимой
@@ -44,7 +44,7 @@ public class Main {
                 case "y":
                     break;
                 case "n":
-                    endProgramFlag = true;
+                    isEndProgramFlag = true;
                     break;
             }
         }
