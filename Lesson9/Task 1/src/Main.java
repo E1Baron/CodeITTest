@@ -3,26 +3,50 @@ import java.util.Scanner;
 public class Main {
     static double a = 0;
     static double b = 0;
-    static String inputOperationSign;
+    static boolean y = false;
 
     public static void main(String[] args) {
-        //todo Вам нужно дополнить методы так, чтобы получился рабочий калькулятор
-        inputDouble();
-        switch (inputOperationSign) {
-            case "+":
-                sum();
-                break;
-            case "-":
-                diff();
-                break;
-            case "*":
-                multiply();
-                break;
-            case "/":
-                divide();
-                break;
-            case "Y":
 
+        //todo Вам нужно дополнить методы так, чтобы получился рабочий калькулятор
+        while (y == false) {
+            System.out.print("""
+                    Добро пожаловать в КалькуляторМатик 3000 ! Наша программа может подсчитать что угодно!
+                    Введите первое число, затем второе число, затем знак необходимой
+                    арифметической операции (+-/*), после чего система выдаст результат вычислений
+                    Введите первое число:
+                    """);
+
+            a = inputDouble();
+            System.out.print("""
+                    Введите второе число: 
+                    """);
+            b = inputDouble();
+            System.out.print("""
+                    Введите знак необходимой операции (+-/*):
+                    """);
+            switch (inputOperationSign()) {
+                case "+":
+                    sum();
+                    break;
+                case "-":
+                    diff();
+                    break;
+                case "*":
+                    multiply();
+                    break;
+                case "/":
+                    divide();
+                    break;
+
+            }
+            System.out.println("Желаете продолжить ? y/n");
+            switch (new Scanner(System.in).nextLine()) {
+                case "y":
+                    break;
+                case "n":
+                    y = true;
+                    break;
+            }
         }
 //        sum();      //Метод суммирования чисел
 //        multiply(); //Метод умножения чисел
@@ -52,24 +76,12 @@ public class Main {
 
     private static double inputDouble() {
         //todo дописать логику
-        System.out.println("""
-                Добро пожаловать в КалькулятоМатик 3000 ! Наша программа может подсчитать что угодно!
-                Введите первое число, затем второе число, затем знак необходимой
-                арифметической операции (+-/*), после чего система выдаст результат вычислений
-                """);
-        System.out.println("""
-                Введите первое число:
-                """);
-        a = new Scanner(System.in).nextDouble();
-        System.out.println("""
-                Введите второе число:
-                """);
-        b = new Scanner(System.in).nextDouble();
-        System.out.print("""
-                Введите знак необходимой арифметической операции:
-                """);
-        inputOperationSign = new Scanner(System.in).nextLine();
-        return 0;
+        return new Scanner(System.in).nextDouble();
     }
+
+    private static String inputOperationSign() {
+        return new Scanner(System.in).nextLine();
+    }
+
 
 }
