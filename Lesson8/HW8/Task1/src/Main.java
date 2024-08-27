@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //#1 Создать массив из 10 целых чисел. Значения могут быть любыми
+        //#1 Создать массив из 10 целых чисел. Значения могут быть любыми !
         //todo
 
         int[] testArray = new int[]{10, 12, 13, 34, 55, 33, 49, 59, 14, 79};
