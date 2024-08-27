@@ -23,7 +23,8 @@ public class Main {
             System.out.print(testArray[i] + " ");
         }
         System.out.println();
-        System.out.println("Распечатать все значения массива с конца (начиная с последнего до 0 индексов)");
+        System.out.println("Распечатать все значения массива с конца " +
+                "(начиная с последнего до 0 индексов)");
         System.out.println();
 
         //#4 *** Задание особой сложности. Развернуть массив(см конец урока).
@@ -35,9 +36,11 @@ public class Main {
             j++;
         }
         System.out.println("Реверс изначального массива:  " + Arrays.toString(testArrayRevers));
+        System.out.println();
         System.arraycopy(testArrayRevers, 0, testArray, 0, testArray.length);
         System.out.println("Элементы изначального массива подвергли реверсу" +
                 " и записали в изначальный массив \n" + Arrays.toString(testArray));
+        System.out.println();
         //todo
         //Ниже решение задачи особой сложности - так как НУЖНО было её решить, без фокусов
 
@@ -46,6 +49,7 @@ public class Main {
         for ( int i : mass2){
             System.out.print(i + " ");
         }
+        System.out.println();
         int changer = 0;
         for (int i = 0; i < mass2.length / 2; i++) {
             changer = mass2[i];
